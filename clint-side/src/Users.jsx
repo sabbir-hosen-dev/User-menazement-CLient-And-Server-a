@@ -1,6 +1,5 @@
+/* eslint-disable react/prop-types */
 
-
-// eslint-disable-next-line react/prop-types
 function Users({users}) {
   
 
@@ -9,7 +8,6 @@ function Users({users}) {
     <div>
       <p> Noumber Of User : {users && users.length}</p>
       {users &&
-        // eslint-disable-next-line react/prop-types
         users.map((user) => (
           <div key={user.id} className="user">
             <p>Id: {user.id}</p>

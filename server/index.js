@@ -38,7 +38,6 @@ app.get("/users",(req,res) => {
 })
 
 app.post("/users", (req,res) => {
-  console.log("get Data")
 
   const id = users.length + 1
 

@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 
 
-function Form() {
+function Form({setUser}) {
   const handlesubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -14,7 +15,11 @@ function Form() {
       },
       body : JSON.stringify({name,email})
     })
-    .then( data => console.log(data))
+    .then( res => res.json())
+    .then( newUser => {
+      setUser(newUser)
+      form.reset()
+    })
     .catch(err => console.log(err))
   }
 
